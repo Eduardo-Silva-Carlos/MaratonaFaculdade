@@ -20,8 +20,11 @@ public class Main {
 
         double v = calc.volume(radius);
 
+        //noinspection MalformedFormatString
         System.out.printf("Circumferences  %.2f%n" + c);
+        //noinspection MalformedFormatString
         System.out.printf("Volume is : %.2f%n" + v);
+        //noinspection MalformedFormatString
         System.out.printf("PI value is : %.2f%n"+ PI);
 
 
