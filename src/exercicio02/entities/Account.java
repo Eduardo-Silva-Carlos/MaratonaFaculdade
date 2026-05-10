@@ -1,23 +1,22 @@
-package exercicio02;
+package exercicio02.entities;
 
 
 public class Account {
     private final int number;
     private String holder;
     private double balance;
-
+    // Method with two arguments
     public Account(int number, String holder) {
         this.number = number;
         this.holder = holder;
     }
-
+    // Overloading method three arguments
     public Account(int number, String holder, double initialDeposit) {
         this.number = number;
         this.holder = holder;
-        deposit(initialDeposit);// Aqui caso mude a regra de negócio vamos alterar nesse método
-
+        deposit(initialDeposit);// If you need to modify the business rule here, it will be changed in this section.
     }
-
+    // Getts e setts
     public int getNumber() {
         return number;
     }
@@ -41,5 +40,15 @@ public class Account {
     public void withDraw(double amount){
         balance -= amount + 5.0;
     }
+    //Overwriting the method toString
+    @Override
+    public String toString(){
+        return "Account "
+                + number
+                +", Holder: "
+                + holder
+                + ", Balance: $ "
+                + String.format("%.2f",balance);
 
+    }
 }
